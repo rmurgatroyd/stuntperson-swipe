@@ -4,14 +4,14 @@
 
 Instructions to deploy iOS app
 
-Expo CLI: `npm install -g expo-cli` (if not already installed)
+`npm install -g expo-cli` (if not already installed)
 
-Clone: `git clone https://github.com/rmurgatroyd/stuntperson-swipe.git`
+`git clone https://github.com/rmurgatroyd/stuntperson-swipe.git`
 
-Project folder: `cd stuntperson-swipe`
+`cd stuntperson-swipe`
 
-Install dependencies: `yarn`
+`yarn`
 
-Start: `expo start`
+`expo start`
 
-Run in iOS simulator: `i`
+`i`
