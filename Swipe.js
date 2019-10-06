@@ -4,7 +4,7 @@ import { Card } from 'react-native-elements';
 
 const screenWidth = Dimensions.get('window').width;
 const swipeThreshold = 0.25 * screenWidth;
-const swipeOut = 250;
+const swipeOut = 200;
 
 
 class Swipe extends Component {
@@ -18,7 +18,7 @@ class Swipe extends Component {
   super(props);
   this.position = new Animated.ValueXY();
   this.panResponder = PanResponder.create({
-    // Ask to be the responder:
+
     onStartShouldSetPanResponder: (evt, gestureState) => true,
     onPanResponderMove: (evt, gesture) => {
       this.position.setValue({ x: gesture.dx, y: gesture.dy });
@@ -76,19 +76,19 @@ renderCards = () => {
           >
           {this.props.renderCard(item)}
         </Animated.View>
-  )}
-  return(
-    <View
-      key={item[this.props.keyProp]}
-      style={[styles.cardStyle, { top: 20 * (i - this.state.index)}]}>
-      {this.props.renderCard(item)}
-    </View>
-  );
-}).reverse();
+        )}
+      return(
+        <View
+        key={item[this.props.keyProp]}
+        style={[styles.cardStyle, { top: 20 * (i - this.state.index)}]}>
+        {this.props.renderCard(item)}
+        </View>
+        );
+  }).reverse();
 }
 
-  render() {
-    return <View>{this.renderCards()}</View>;
+render() {
+  return <View>{this.renderCards()}</View>;
   }
 }
 

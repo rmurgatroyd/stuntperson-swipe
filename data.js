@@ -1,17 +1,27 @@
 export default [
   {
-    "name": "Cliff Booth",
-    "src": require("./assets/cliffBooth.jpg"),
+    "name": "Zoe Bell",
+    "src": require("./assets/zoeBell.png"),
     "id": "1"
   },
   {
-    "name": "Ashtrjt",
+    "name": "Cliff Booth",
     "src": require("./assets/cliffBooth.jpg"),
     "id": "2"
   },
   {
-    "name": "Csrhtrjd",
-    "src": require("./assets/cliffBooth.jpg"),
+    "name": "Michelle Yeoh",
+    "src": require("./assets/michelleYeoh.jpg"),
     "id": "3"
+  },
+  {
+    "name": "Richard Bradshaw",
+    "src": require("./assets/richardBradshaw.jpg"),
+    "id": "4"
+  },
+  {
+    "name": "Monique Ganderton",
+    "src": require("./assets/moniqueGanderton.jpg"),
+    "id": "5"
   },
 ]

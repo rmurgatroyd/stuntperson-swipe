@@ -18,7 +18,6 @@ class App extends Component {
   passedStunt: []
 };
 
-
 likedAnimate () {
   this.animatedValue1.setValue(0)
   Animated.timing(
@@ -56,7 +55,6 @@ handleLikedStunt = (stuntName) => {
     likedStunt: [...this.state.likedStunt, stuntName]
 }));
 this.animation1();
-console.log(stuntName);
 };
 
 handlePassedStunt = (stuntName) => {
@@ -64,20 +62,19 @@ handlePassedStunt = (stuntName) => {
     passedStunt: [...this.state.passedStunt, stuntName]
 }));
 this.animation2();
-console.log(stuntName);
 };
 
 renderCards(stuntperson) {
   return (
     <Card>
-      <View style={{ height: 200 }}>
+      <View style={{ height: 300 }}>
         <Image
           source={stuntperson.src}
-          style={{ width: '100%', height: 200 }}
+          style={{ width: '100%', height: 300 }}
         />
       </View>
       <View style={styles.detailWrapper}>
-        <Text>{stuntperson.name}</Text>
+        <Text style={{fontSize: 20}}>{stuntperson.name}</Text>
       </View>
     </Card>
   );
@@ -85,8 +82,8 @@ renderCards(stuntperson) {
 
 renderNoMoreCards = () => {
   return (
-    <Card style={styles.noMore} title="You liked these stuntpeople:">
-      <Text>{this.state.likedStunt.toString()}</Text>
+    <Card title="You liked these stuntpeople:">
+      <Text style={{fontSize: 16}}>{this.state.likedStunt.join(", ")}</Text>
     </Card>
   );
 };
@@ -103,6 +100,7 @@ render() {
 
   return (
     <SafeAreaView style={styles.container}>
+      <Text style={{textAlign: 'center', fontSize: 25, marginTop: 5}}>Position: Stunt double</Text>
       <Swipe
         data={stuntpeople}
         renderCard={this.renderCards}
@@ -114,11 +112,11 @@ render() {
       <View style={styles.statusStyle}>
         <Animated.Image
           source={require('./assets/cross.png')}
-          style={{height: 50, width: 50, transform: [{scale: passedScale}]}}
+          style={{height: 100, width: 100, transform: [{scale: passedScale}]}}
         />
       <Animated.Image
         source={require('./assets/tick.png')}
-        style={{height: 50, width: 50, transform: [{scale: likedScale}]}}
+        style={{height: 100, width: 100, transform: [{scale: likedScale}]}}
       />
   </View>
     </SafeAreaView>
@@ -128,18 +126,20 @@ render() {
 const styles = StyleSheet.create({
 container: {
   flex: 1,
-  backgroundColor: '#fff',
+  backgroundColor: '#D3D3D3',
   marginTop: 100
 },
 statusStyle: {
   padding: 15,
   flexDirection: 'row',
   justifyContent: 'space-around',
-  marginTop: 300
+  marginTop: 430
 },
-noMore: {
+detailWrapper: {
   flex: 1,
-  flexDirection: 'column'
+  flexDirection: 'row',
+  justifyContent: 'center',
+  marginTop: 5
 }
 });
 export default App;
