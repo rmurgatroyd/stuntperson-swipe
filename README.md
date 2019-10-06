@@ -1,6 +1,6 @@
 # stuntperson-swipe
 
-##Set up
+## Set up
 
 Instructions to deploy iOS app
 
