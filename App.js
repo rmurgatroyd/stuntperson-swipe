@@ -83,7 +83,9 @@ renderCards(stuntperson) {
 renderNoMoreCards = () => {
   return (
     <Card title="You liked these stuntpeople:">
-      <Text style={{fontSize: 16}}>{this.state.likedStunt.join(", ")}</Text>
+      <View>
+        <Text style={{fontSize: 16}}>{this.state.likedStunt.join(", ")}</Text>
+      </View>
     </Card>
   );
 };
