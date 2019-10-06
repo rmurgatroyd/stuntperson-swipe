@@ -10,7 +10,7 @@ Instructions to deploy iOS app
 
 `cd stuntperson-swipe`
 
-`yarn`
+`npm install`
 
 `expo start`
 
